@@ -1,0 +1,40 @@
+{
+  "name": "Agreezy",
+  "version": "0.1",
+  "manifest_version": 3,
+  "minimum_chrome_version": "138",
+  "description": "Understand terms of service and privacy policies with AI - summarize, extract key points, translate, and ask questions using Chrome's built-in AI.",
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "trial_tokens": [
+    "AkGcfoMTs5K71isPlCiY033XA9HKSjUJvPCF6K56eqY7mAUAsR7NDbmIWDjomLgCREuOS38XAuafVTz209utDwQAAABzeyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vamdrYm1sZmZlYWRtZWZqZmdrY2tmYnBja3Bvb2loY2UiLCJmZWF0dXJlIjoiQUlTdW1tYXJpemF0aW9uQVBJIiwiZXhwaXJ5IjoxNzUzMTQyNDAwfQ=="
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["tabs", "scripting", "sidePanel", "storage", "contextMenus", "notifications"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/detector.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "Analyze with Agreezy"
+  }
+}

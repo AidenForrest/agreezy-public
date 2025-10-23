@@ -1,0 +1,147 @@
+/* Tic-Tac-Toe Game Styles */
+
+.game-container {
+  margin-top: var(--size-3);
+  padding: var(--size-4);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+  border: 1px solid var(--surface-3);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--size-3);
+}
+
+.game-title {
+  font-weight: 600;
+  font-size: var(--font-size-2);
+  color: var(--primary-color);
+}
+
+.close-game-btn {
+  background: transparent;
+  border: none;
+  font-size: var(--font-size-4);
+  color: var(--text-2);
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-1);
+  transition: all 0.2s;
+}
+
+.close-game-btn:hover {
+  background: var(--surface-3);
+  color: var(--text-1);
+}
+
+#tictactoe-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--size-1);
+  max-width: 200px;
+  margin: 0 auto var(--size-3);
+}
+
+.cell {
+  aspect-ratio: 1;
+  background: var(--surface-1);
+  border: 2px solid var(--surface-3);
+  border-radius: var(--radius-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-5);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.cell:hover:not(.taken) {
+  background: var(--surface-2);
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.cell.taken {
+  cursor: not-allowed;
+}
+
+.cell.x {
+  color: var(--primary-color);
+}
+
+.cell.o {
+  color: var(--red-6);
+}
+
+.cell.winner {
+  background: var(--primary-color);
+  color: white;
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.game-status {
+  text-align: center;
+  font-size: var(--font-size-1);
+  font-weight: 500;
+  margin-bottom: var(--size-2);
+  min-height: 24px;
+  color: var(--text-1);
+}
+
+.game-status.win {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.game-status.lose {
+  color: var(--red-6);
+  font-weight: 600;
+}
+
+.new-game-btn {
+  width: 100%;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--size-2);
+  border-radius: var(--radius-2);
+  cursor: pointer;
+  font-size: var(--font-size-1);
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.new-game-btn:hover {
+  background: var(--primary-hover);
+}

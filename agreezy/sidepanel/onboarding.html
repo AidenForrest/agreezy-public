@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Agreezy</title>
+    <link rel="stylesheet" type="text/css" href="onboarding.css" />
+  </head>
+  <body>
+    <div class="onboarding-container">
+      <!-- Step 1: Welcome -->
+      <div class="onboarding-step active" data-step="1">
+        <div class="onboarding-content">
+          <div class="logo-section">
+            <div class="logo-circle">✨</div>
+            <h1>Welcome to Agreezy</h1>
+          </div>
+          <p class="subtitle">Your personal AI assistant for understanding terms, policies, and any document.</p>
+          <div class="feature-preview">
+            <div class="preview-item">
+              <span class="preview-icon">🎯</span>
+              <span>Extract key points instantly</span>
+            </div>
+            <div class="preview-item">
+              <span class="preview-icon">📝</span>
+              <span>Smart summaries</span>
+            </div>
+            <div class="preview-item">
+              <span class="preview-icon">🌍</span>
+              <span>Translate to any language</span>
+            </div>
+            <div class="preview-item">
+              <span class="preview-icon">💬</span>
+              <span>Ask questions</span>
+            </div>
+          </div>
+          <button class="onboarding-btn primary" id="btn-step-1">Get Started</button>
+        </div>
+      </div>
+
+      <!-- Step 2: How it works -->
+      <div class="onboarding-step" data-step="2">
+        <div class="onboarding-content">
+          <h2>How Agreezy Works</h2>
+          <div class="steps-visual">
+            <div class="step-item">
+              <div class="step-number">1</div>
+              <h3>Visit any page</h3>
+              <p>Navigate to any website with text content - articles, terms of service, privacy policies, etc.</p>
+            </div>
+            <div class="step-item">
+              <div class="step-number">2</div>
+              <h3>Open Agreezy</h3>
+              <p>Click the extension icon or right-click and select "Analyze with Agreezy"</p>
+            </div>
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <h3>Get insights</h3>
+              <p>View key points, summaries, translations, and ask questions about the content</p>
+            </div>
+          </div>
+          <div class="onboarding-actions">
+            <button class="onboarding-btn secondary" id="btn-step-2-back">Back</button>
+            <button class="onboarding-btn primary" id="btn-step-2-next">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Personalize -->
+      <div class="onboarding-step" data-step="3">
+        <div class="onboarding-content">
+          <h2>Personalize Your Experience</h2>
+          <p class="subtitle">Let's customize Agreezy to your preferences</p>
+
+          <div class="personalization-section">
+            <label for="user-name" class="input-label">What should we call you? (optional)</label>
+            <input type="text" id="user-name" class="text-input" placeholder="Your name">
+          </div>
+
+          <div class="personalization-section">
+            <label for="default-language" class="input-label">Preferred translation language</label>
+            <select id="default-language" class="select-input">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+              <option value="de">German</option>
+              <option value="it">Italian</option>
+              <option value="pt">Portuguese</option>
+              <option value="ja">Japanese</option>
+              <option value="zh">Chinese</option>
+              <option value="ar">Arabic</option>
+              <option value="hi">Hindi</option>
+            </select>
+          </div>
+
+          <div class="personalization-section">
+            <label for="theme-preference" class="input-label">Theme preference</label>
+            <select id="theme-preference" class="select-input">
+              <option value="auto">Auto (System)</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+
+          <div class="onboarding-actions">
+            <button class="onboarding-btn secondary" id="btn-step-3-back">Back</button>
+            <button class="onboarding-btn primary" id="btn-step-3-complete">Start Using Agreezy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress dots -->
+      <div class="progress-dots">
+        <span class="dot active" data-dot="1"></span>
+        <span class="dot" data-dot="2"></span>
+        <span class="dot" data-dot="3"></span>
+      </div>
+    </div>
+
+    <script src="onboarding.js" type="module"></script>
+  </body>
+</html>

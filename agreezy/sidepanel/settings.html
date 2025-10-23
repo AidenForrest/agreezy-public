@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Agreezy</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="settings.css" />
+  </head>
+  <body>
+    <div class="settings-container">
+      <!-- Header -->
+      <div class="settings-header">
+        <button class="back-btn" id="back-btn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Back
+        </button>
+        <h1>Settings</h1>
+      </div>
+
+      <!-- Settings Sections -->
+      <div class="settings-content">
+
+        <!-- Personal Section -->
+        <section class="settings-section">
+          <div class="section-header">
+            <span class="section-icon">👤</span>
+            <h2>Personal</h2>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="user-name">Your Name</label>
+              <p class="setting-description">Personalize your experience</p>
+            </div>
+            <input type="text" id="user-name" class="setting-input" placeholder="Enter your name">
+          </div>
+        </section>
+
+        <!-- Preferences Section -->
+        <section class="settings-section">
+          <div class="section-header">
+            <span class="section-icon">⚙️</span>
+            <h2>Preferences</h2>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="default-language">Default Translation Language</label>
+              <p class="setting-description">Language to translate content into</p>
+            </div>
+            <select id="default-language" class="setting-select">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+              <option value="de">German</option>
+              <option value="it">Italian</option>
+              <option value="pt">Portuguese</option>
+              <option value="ja">Japanese</option>
+              <option value="zh">Chinese</option>
+              <option value="ar">Arabic</option>
+              <option value="hi">Hindi</option>
+            </select>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="default-summary-type">Default Summary Type</label>
+              <p class="setting-description">Preferred summary format</p>
+            </div>
+            <select id="default-summary-type" class="setting-select">
+              <option value="key-points">Key Points</option>
+              <option value="tldr">TL;DR</option>
+              <option value="teaser">Teaser</option>
+              <option value="headline">Headline</option>
+            </select>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="default-summary-length">Default Summary Length</label>
+              <p class="setting-description">Preferred summary length</p>
+            </div>
+            <select id="default-summary-length" class="setting-select">
+              <option value="short">Short</option>
+              <option value="medium">Medium</option>
+              <option value="long">Long</option>
+            </select>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="auto-analyze">Auto-Analyze Pages</label>
+              <p class="setting-description">Automatically analyze when opening side panel</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="auto-analyze" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="auto-detection">Smart Page Detection</label>
+              <p class="setting-description">Get notified when terms, policies, or checkout pages are detected</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="auto-detection" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Appearance Section -->
+        <section class="settings-section">
+          <div class="section-header">
+            <span class="section-icon">🎨</span>
+            <h2>Appearance</h2>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="theme-preference">Theme</label>
+              <p class="setting-description">Choose your preferred theme</p>
+            </div>
+            <select id="theme-preference" class="setting-select">
+              <option value="auto">Auto (System)</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="show-game">Show Game During Loading</label>
+              <p class="setting-description">Tic-tac-toe option while waiting</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="show-game" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="settings-section">
+          <div class="section-header">
+            <span class="section-icon">ℹ️</span>
+            <h2>About</h2>
+          </div>
+
+          <div class="about-info">
+            <p><strong>Agreezy</strong> v1.0.0</p>
+            <p>Understand terms & policies with AI</p>
+            <p class="small-text">Powered by Chrome's Built-in AI</p>
+          </div>
+
+          <button class="settings-action-btn" id="reset-onboarding-btn">
+            Reset Onboarding
+          </button>
+        </section>
+
+        <!-- Save Button -->
+        <div class="save-section">
+          <button class="save-btn" id="save-btn">Save Changes</button>
+          <p class="save-status" id="save-status"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="settings.js" type="module"></script>
+  </body>
+</html>
