@@ -51,7 +51,7 @@ Agreezy intelligently handles long documents (up to 50,000 characters) by:
 1. Clone this repository:
    ```bash
    git clone <repository-url>
-   cd gemini-chrome-project
+   cd agreezy
    ```
 
 2. Install dependencies:
@@ -69,7 +69,7 @@ Agreezy intelligently handles long documents (up to 50,000 characters) by:
    - Enable "Developer mode" (toggle in top-right)
    - Click "Load unpacked"
    - Select the `dist` directory
-   - Also, see "releases" folder for packed extension which you can easily drag and drop into chrome://extensions
+   - Also, see "releases" folder for packed extension which you can easily drag and drop into chrome://extensions (may not work as not published on Chrome store)
 
 ## How to Use
 
